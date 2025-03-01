@@ -1,5 +1,6 @@
 OMID ARKA
-```bash
+
+```
 
 # **ESXi & vCenter Hardening Guide**
 
