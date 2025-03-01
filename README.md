@@ -16,7 +16,7 @@ vmware -vl
 esxcli software vib list | grep -i security
 ```
 #### **Install Patch Manually:**
-1. Upload the patch to the datastore.
+1. Upload the patch to the datastore. WINSCP
 2. Put ESXi in maintenance mode:
    ```bash
    esxcli system maintenanceMode set --enable true
