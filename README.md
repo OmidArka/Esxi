@@ -1,6 +1,6 @@
-OMID ARKA
+ OMID ARKA
 
-```
+
 
 # **ESXi & vCenter Hardening Guide**
 
