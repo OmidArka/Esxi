@@ -2,6 +2,7 @@ get-vm | Where-Object {$_.Name -notlike "*vCLS*" } | Get-AdvancedSetting  -Name 
 
 
 Hardening
+Get-VM | New-AdvancedSetting -Name "RemoteDisplay.maxConnections" -Value 1
 Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.device.edit.disable" -value $true
 Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.device.connectable.disable" - value $true
 Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.ghi.autologon.disable" - value $true
