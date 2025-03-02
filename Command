@@ -1,0 +1,1 @@
+get-vm | Where-Object {$_.Name -notlike "*vCLS*" } | Get-AdvancedSetting  -Name "isolation.device.edit.disable" | Select Entity, Name, Value
