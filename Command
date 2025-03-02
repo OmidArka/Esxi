@@ -1,1 +1,22 @@
 get-vm | Where-Object {$_.Name -notlike "*vCLS*" } | Get-AdvancedSetting  -Name "isolation.device.edit.disable" | Select Entity, Name, Value
+
+
+Hardening
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.device.edit.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.device.connectable.disable" - value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.ghi.autologon.disable" - value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.bios.bbs.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.vmxDnDVersionGet.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.guestDnDVersionSet.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.ghi.host.shellAction.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.copy.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.dnd.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.setGUIOptions.enable" -value $false
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.paste.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name isolation.tools.hgfsServerSet.disable -Value true
+Get-VM |  Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.diskShrink.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.diskWiper.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "log.keepOld" -value "10"
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "log.rotateSize" -value "1024000"
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "tools.guestlib.enableHostInfo" -value $false
+Get-VM | Get-AdvancedSetting -Name "mks.enable3d" | Set-AdvancedSetting -Value FALSE
