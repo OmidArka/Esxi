@@ -20,7 +20,7 @@
    ```
 
 4. پس از اجرای ابزار، عدد `3` را برای گزینه Reset account password وارد کنید.
-http://techtik.com/wp-content/uploads/2019/05/Reset-Password-vCenter-9.png
+![Reset vCenter Password](http://techtik.com/wp-content/uploads/2019/05/Reset-Password-vCenter-9.png)
 
 5. در مرحله بعد، نام کامل کاربری که قصد ریست کردن آن را دارید وارد نمایید. به‌طور پیش‌فرض:
 
