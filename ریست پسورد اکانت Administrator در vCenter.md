@@ -24,12 +24,15 @@
 Shell.set --enabled true
 shell
 
-3. اجرای ابزار vdcadmintool
+### 3. اجرای ابزار vdcadmintool
+
 shell
 Copy
 Edit
 /usr/lib/vmware-vmdir/bin/vdcadmintool
-4. ریست پسورد Administrator
+
+###  4. ریست پسورد Administrator
+
 پس از اجرای ابزار، گزینه 3 یعنی Reset account password را انتخاب کنید.
 
 سپس نام کامل کاربری که قصد ریست کردن آن را دارید وارد نمایید. به‌صورت پیش‌فرض:
