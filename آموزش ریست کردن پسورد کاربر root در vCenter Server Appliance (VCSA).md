@@ -28,7 +28,7 @@
 - سپس کلید **`e`** را بزنید تا وارد حالت ویرایش شویم.
 
 ### 3. ویرایش پارامترهای بوت
-
+https://knowledge.broadcom.com/external/article/322247/resetting-root-password-in-vcenter-serve.html
 در صفحه ویرایش:
 - خطی که با `linux` یا `linuxefi` شروع می‌شود را پیدا کنید.
 - در انتهای آن، عبارت زیر را اضافه کنید:
