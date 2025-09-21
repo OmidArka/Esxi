@@ -21,3 +21,46 @@ Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "
 Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "log.rotateSize" -value "1024000"
 Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "tools.guestlib.enableHostInfo" -value $false
 Get-VM | Get-AdvancedSetting -Name "mks.enable3d" | Set-AdvancedSetting -Value FALSE
+
+
+Security.PasswordQualityControl
+Default Value :
+"retry=3 min=disabled,disabled,disabled,7,7"
+Set Value : 
+"retry=3 min=disabled,15,15,15,15 max=64 similar=deny passphrase=3"
+
+
+Security.PasswordHistory
+Set Value : 5
+
+Security.AccountLockFailures 
+Set Value : 5
+
+Security.AccountUnlockTime
+Set Value : 900
+
+ESXiShellTimeOut
+Set value : 300
+
+ESXiShellInteractiveTimeOut
+Set value : 200
+
+UserVars.DcuiTimeOut 
+Set value : 600
+
+Net.DVFilterBindIpAddress
+Set value : Blank
+
+SettingUserVars.ESXiVPsDisabledProtocols 
+set value : sslv3,tlsv1,tlsv1.1
+
+Syslog.global.certificate.checkSSLCerts 
+Set value : True
+
+logHost.global.Syslog
+Set value :  
+udp://[ Syslog IP Server ] , tcp://[ Syslog IP Server ]
+
+LogDir.global.Syslog 
+Set value :  [Local Datastore Name]
+
