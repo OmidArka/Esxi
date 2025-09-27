@@ -1,3 +1,17 @@
+Install-Module VMware.PowerCLI -Scope AllUsers -Force -SkipPublisherCheck -AllowClobber
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Import-Module VMware.VimAutomation.Core -Verbose
+
+Set-PowerCLIConfiguration -InvalidCertificateAction Ignore
+
+connect-viserver -server <Vcenter IP | ESXI IP>
+
+
+
+
+
 get-vm | Where-Object {$_.Name -notlike "*vCLS*" } | Get-AdvancedSetting  -Name "isolation.device.edit.disable" | Select Entity, Name, Value
 
 
