@@ -17,9 +17,17 @@ get-vm | Where-Object {$_.Name -notlike "*vCLS*" } | Get-AdvancedSetting  -Name 
 
 Hardening
 Get-VM | New-AdvancedSetting -Name "RemoteDisplay.maxConnections" -Value 1
+Get-VM | Get-FloppyDrive | Select Parent, Name, ConnectionState 
+Get-VM | Get-FloppyDrive | Remove-FloppyDrive
+Get-VM | Get-CDDrive
+Get-VM | Get-CDDrive | Remove-CDDrive
+Get-VM | Get-SerialPort
+Get-VM | Get-SerialPort | Remove-SerialPort
+Get-VM | Get-USBDevice
+Get-VM | Get-USBDevice | Remove-USBDevice
 Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.device.edit.disable" -value $true
-Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.device.connectable.disable" - value $true
-Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.ghi.autologon.disable" - value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.device.connectable.disable" -value $true
+Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.ghi.autologon.disable" -value $true
 Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.bios.bbs.disable" -value $true
 Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.vmxDnDVersionGet.disable" -value $true
 Get-VM | Where-Object {$_.Name -notlike "*vCLS*" } | New-AdvancedSetting -Name "isolation.tools.guestDnDVersionSet.disable" -value $true
