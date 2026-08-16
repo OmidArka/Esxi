@@ -26,17 +26,17 @@ shell
 ### ۳. ساخت کاربر جدید
 ```bash
 useradd -m -s /bin/bash arootvc
-passwd arootvc
+passwd aroot
 ```
 
 ### ۴. اضافه کردن به گروه با دسترسی مدیریتی
 ```bash
-usermod -aG wheel arootvc
+usermod -aG wheel aroot
 ```
 
 ### ۵. تست ورود
 ```bash
-ssh arootvc@<vcsa-ip>
+ssh aroot@<vcsa-ip>
 ```
 
 ## عیب‌یابی خطاهای رایج
