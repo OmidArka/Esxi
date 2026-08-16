@@ -86,3 +86,9 @@ udp://[ Syslog IP Server ] , tcp://[ Syslog IP Server ]
 LogDir.global.Syslog 
 Set value :  [Local Datastore Name]
 
+
+
+Local user
+useradd -m -s /bin/bash aroot
+passwd aroot
+usermod -aG wheel aroot
